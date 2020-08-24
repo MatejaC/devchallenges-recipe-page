@@ -51,15 +51,53 @@ h6 {
   color: #000000;
 }
 
-/* .the-container {
+.the-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(10, [row] auto);
-  background-color: $background;
-} */
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: ([row] auto)[15];
+      grid-template-rows: repeat(15 [row] auto);
+  background-color: #fafafa;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1 / 12;
+  grid-row: row 1;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.intro {
+  display: inline-block;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1 / 12;
+  grid-row: row 2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #4f4f4f;
+}
+
 .cake-photo {
   display: inline-block;
   position: relative;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 9;
+  grid-column: 2 / 11;
+  grid-row: row 3;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -69,12 +107,102 @@ h6 {
   max-width: 100ch;
 }
 
+.yields-box {
+  display: block;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row: row 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: span 2;
+      grid-template-columns: span 2;
+  -ms-grid-rows: 1 / 3;
+      grid-template-rows: 1 / 3;
+}
+
 .material-icons.orange {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   color: #f2994a;
-  font-size: 24px;
+  font-size: 18px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+.yields {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  margin: 0;
+}
+
+.servings {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #f2994a;
+}
+
+.preparation {
+  display: block;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  grid-row: row 5;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.material-icons.md-18.gray {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  font-family: "Material Icons";
+  font-weight: normal;
+  color: #4f4f4f;
+  font-size: 18px;
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -94,14 +222,59 @@ h6 {
           font-feature-settings: "liga";
 }
 
-.material-icons.gray {
+.prep-time {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.min {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.cooking {
+  display: block;
+  position: relative;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  grid-row: row 5;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.material-icons.md-18.gray {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   color: #4f4f4f;
-  font-size: 24px;
+  font-size: 18px;
   /* Preferred icon size */
-  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
@@ -119,8 +292,147 @@ h6 {
           font-feature-settings: "liga";
 }
 
+.cook-time {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.hour {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.total-cooking-time {
+  display: block;
+  position: relative;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-column: 8 / 10;
+  grid-row: row 5;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.material-icons.md-18.gray {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  color: #4f4f4f;
+  font-size: 18px;
+  /* Preferred icon size */
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+.total-time {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.hours {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.ingredients {
+  display: inline-block;
+  position: relative;
+  position: relative;
+  display: inline-block;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 6;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.crust-section {
+  position: relative;
+  display: inline-block;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1 / 9;
+  grid-row: row 7;
+}
+
+.crust {
+  font-size: 0.875rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+}
+
 /* checkboxes */
 .container {
+  position: relative;
+  display: inline-block;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 8;
+  position: relative;
   display: block;
   position: relative;
   padding-left: 35px;
@@ -191,11 +503,40 @@ h6 {
   transform: rotate(45deg);
 }
 
-.crust {
+.cheesecake-section {
   display: inline-block;
   position: relative;
-  font-size: 0.875rem;
-  font-family: "Montserrat", sans-serif;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 9;
+}
+
+.cheesecake {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.instructions-section {
+  display: inline-block;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 10;
+}
+
+.instructions {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
 }
 
 .rectangle {
@@ -213,10 +554,17 @@ h6 {
   line-height: 32px;
 }
 
-.cheesecake {
-  display: inline-block;
-  position: relative;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
+.source {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 11;
+}
+
+footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 12;
 }
 /*# sourceMappingURL=style.css.map */
