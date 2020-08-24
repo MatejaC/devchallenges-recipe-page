@@ -42,15 +42,6 @@ body {
   background-color: #fafafa;
 }
 
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
-}
-
 .the-container {
   display: -ms-grid;
   display: grid;
@@ -410,8 +401,8 @@ h6 {
   position: relative;
   display: inline-block;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-column: 1 / 9;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
   grid-row: row 7;
 }
 
@@ -507,8 +498,8 @@ h6 {
   display: inline-block;
   position: relative;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-column: 1 / 8;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
   grid-row: row 9;
 }
 
@@ -525,9 +516,19 @@ h6 {
   display: inline-block;
   position: relative;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-column: 1 / 8;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
   grid-row: row 10;
+}
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  /* or 24px */
+  color: #000000;
 }
 
 .instructions {
@@ -559,6 +560,13 @@ h6 {
   -ms-grid-column-span: 7;
   grid-column: 1 / 8;
   grid-row: row 11;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* or 18px */
+  color: #bdbdbd;
 }
 
 footer {
@@ -566,5 +574,12 @@ footer {
   -ms-grid-column-span: 7;
   grid-column: 1 / 8;
   grid-row: row 12;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #a9a9a9;
 }
 /*# sourceMappingURL=style.css.map */

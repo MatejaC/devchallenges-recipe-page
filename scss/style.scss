@@ -50,14 +50,7 @@ $orange: #f2994a;
 body {
   background-color: $background;
 }
-h6 {
-  font-family: $fontMontserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: $black;
-}
+
 // mobile
 .the-container {
   display: grid;
@@ -356,7 +349,7 @@ h6 {
 .crust-section {
   position: relative;
   display: inline-block;
-  grid-column: 1 / 9;
+  grid-column: 1 / 13;
   grid-row: row 7;
 }
 .crust {
@@ -448,7 +441,7 @@ h6 {
 .cheesecake-section {
   display: inline-block;
   position: relative;
-  grid-column: 1 / 8;
+  grid-column: 1 / 13;
   grid-row: row 9;
 }
 .cheesecake {
@@ -463,10 +456,18 @@ h6 {
 .instructions-section {
   display: inline-block;
   position: relative;
-  grid-column: 1 / 8;
+  grid-column: 1 / 13;
   grid-row: row 10;
 }
-
+h6 {
+  font-family: $fontMontserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  /* or 24px */
+  color: $black;
+}
 .instructions {
   font-family: $fontPlayfairDisplay;
   font-style: normal;
@@ -495,8 +496,22 @@ h6 {
 .source {
   grid-column: 1 / 8;
   grid-row: row 11;
+  font-family: $fontMontserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* or 18px */
+  color: $gray4;
 }
 footer {
   grid-column: 1 / 8;
   grid-row: row 12;
+  font-family: $fontMontserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: $grayFooter;
 }
