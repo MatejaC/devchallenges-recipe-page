@@ -96,17 +96,22 @@ body {
 .cake-photo {
   display: inline-block;
   position: relative;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 11;
-  grid-column: 2 / 13;
+  grid-column: 1 / 12;
   grid-row: row 3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
   line-height: 100%;
   width: 100%;
   max-width: 100ch;
   border-radius: 0.75rem;
-  margin: 0 -1rem 0 -1rem;
+  margin: 0 0rem 0 0.8rem;
 }
 
 .yields-box {

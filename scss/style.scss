@@ -95,14 +95,16 @@ body {
 .cake-photo {
   display: inline-block;
   position: relative;
-  grid-column: 2 / 13;
+  grid-column: 1 / 12;
   grid-row: row 3;
+  justify-content: center;
+  align-content: center;
   justify-self: stretch;
   line-height: 100%;
   width: 100%;
   max-width: 100ch;
   border-radius: 0.75rem;
-  margin: 0 -1rem 0 -1rem;
+  margin: 0 0rem 0 0.8rem;
 }
 
 .yields-box {
