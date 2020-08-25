@@ -669,22 +669,27 @@ body {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 150%;
   color: #bdbdbd;
+  margin: 1rem 0.6rem 9rem 0.6rem;
 }
 
 footer {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-column: 1 / 8;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
   grid-row: row 21;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  /* identical to box height */
+  font-size: 0.55rem;
+  line-height: 1.1rem;
   color: #a9a9a9;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */
