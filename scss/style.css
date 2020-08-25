@@ -340,8 +340,8 @@ body {
   grid-row: row 5;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   margin: 0rem 0 1.5rem 0.6rem;
 }
 
@@ -408,18 +408,16 @@ body {
 .ingredients {
   display: inline-block;
   position: relative;
-  position: relative;
   display: inline-block;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-column: 1 / 8;
   grid-row: row 6;
   font-family: "Playfair Display", serif;
-  font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.1rem;
   color: #333333;
+  margin: 0.2rem 0 1rem 0.6rem;
 }
 
 .crust-section {
@@ -429,15 +427,15 @@ body {
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
   grid-row: row 7;
+  margin: 0rem 0.6rem 0rem 0.6rem;
 }
 
 .crust {
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 21px;
+  margin: 0rem 0 1.2rem 0rem;
 }
 
 /* checkboxes */
@@ -451,13 +449,12 @@ body {
   position: relative;
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 30px;
+  margin-bottom: 8px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 25px;
   cursor: pointer;
-  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -481,7 +478,7 @@ body {
   height: 21px;
   width: 21px;
   background-color: #fafafa;
-  border: 1px solid orange;
+  border: 1px solid #828282;
   border-radius: 4px;
 }
 
@@ -526,27 +523,103 @@ body {
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
   grid-row: row 9;
+  margin: 0rem 0.6rem 0rem 0.6rem;
 }
 
 .cheesecake {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 0.9rem;
   line-height: 24px;
   color: #333333;
+  margin: 1rem 0 1.2rem 0rem;
 }
 
-.instructions-section {
+/* .instructions-section {
+  display: inline-block;
+  position: relative;
+  grid-column: 1 / 13;
+  grid-row: row 10;
+  margin: 1rem 0.6rem 1rem 0.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+.instructions {
   display: inline-block;
   position: relative;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / 13;
-  grid-row: row 10;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  grid-row: row 11;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333333;
+  margin: 1rem 0 1.6rem 0.6rem;
 }
 
-h6 {
+.rectangle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  background: #f2994a;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font: 24px "Playfair Display", serif;
+  font-weight: bold;
+  margin-left: 0.6rem;
+}
+
+.rectangle1 {
+  -ms-grid-row: 13;
+  grid-row: 13;
+}
+
+.rectangle2 {
+  -ms-grid-row: 14;
+  grid-row: 14;
+}
+
+.rectangle3 {
+  -ms-grid-row: 15;
+  grid-row: 15;
+}
+
+.rectangle4 {
+  -ms-grid-row: 16;
+  grid-row: 16;
+}
+
+.rectangle5 {
+  -ms-grid-row: 17;
+  grid-row: 17;
+}
+
+.rectangle6 {
+  -ms-grid-row: 18;
+  grid-row: 18;
+}
+
+.rectangle7 {
+  -ms-grid-row: 19;
+  grid-row: 19;
+}
+
+.instruction-steps {
+  display: inline-block;
+  position: relative;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 11;
+  grid-column: 2 / 13;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -554,37 +627,49 @@ h6 {
   line-height: 150%;
   /* or 24px */
   color: #000000;
+  margin: 0 0.6rem 1.3rem 0;
 }
 
-.instructions {
-  font-family: "Playfair Display", serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  color: #333333;
+.instruction-steps1 {
+  -ms-grid-row: 13;
+  grid-row: 13;
 }
 
-.rectangle {
-  display: inline-block;
-  position: relative;
-  border-radius: 6px;
-  width: 36px;
-  height: 36px;
-  background: #f2994a;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font: 24px "Playfair Display", serif;
-  font-weight: bold;
-  line-height: 32px;
+.instruction-steps2 {
+  -ms-grid-row: 14;
+  grid-row: 14;
+}
+
+.instruction-steps3 {
+  -ms-grid-row: 15;
+  grid-row: 15;
+}
+
+.instruction-steps4 {
+  -ms-grid-row: 16;
+  grid-row: 16;
+}
+
+.instruction-steps5 {
+  -ms-grid-row: 17;
+  grid-row: 17;
+}
+
+.instruction-steps6 {
+  -ms-grid-row: 18;
+  grid-row: 18;
+}
+
+.instruction-steps7 {
+  -ms-grid-row: 19;
+  grid-row: 19;
 }
 
 .source {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-column: 1 / 8;
-  grid-row: row 11;
+  grid-row: row 20;
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: normal;
@@ -598,7 +683,7 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-column: 1 / 8;
-  grid-row: row 12;
+  grid-row: row 21;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
