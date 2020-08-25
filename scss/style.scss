@@ -51,29 +51,37 @@ body {
   background-color: $background;
 }
 
-// mobile
+/* mobile */
 .the-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(15 [row] auto);
   background-color: $background;
 }
+
 .title {
   display: inline-block;
   position: relative;
-  grid-column: 1 / 12;
+  grid-column: 1 / 13;
   grid-row: row 1;
   font-family: $fontPlayfairDisplay;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  color: $black;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0.95rem 0 0.75rem 0.5rem;
+}
+.dots {
+  display: inline-block;
+  position: relative;
+  grid-column: 1;
+  grid-row: row 2;
+  margin: 0.2rem 0 0 0.5rem;
 }
 .intro {
   display: inline-block;
   position: relative;
-  grid-column: 1 / 12;
+  grid-column: 2 / 13;
   grid-row: row 2;
   font-family: $fontMontserrat;
   font-weight: 500;
@@ -81,29 +89,33 @@ body {
   font-size: 0.7rem;
   line-height: 0.9rem;
   color: $gray2;
-  //  letter-spacing: 0.05rem;
-  //  margin: 0rem 0 1rem 0.5rem;
+  margin: 0rem 1rem 1.2rem 0.3rem;
 }
+
 .cake-photo {
   display: inline-block;
   position: relative;
-  grid-column: 2 / 11;
+  grid-column: 2 / 13;
   grid-row: row 3;
-  text-align: center;
-  align-items: center;
+
+  justify-self: stretch;
+
   line-height: 100%;
   width: 100%;
   max-width: 100ch;
+  border-radius: 0.75rem;
+  margin: 0 0rem 0 -1.05rem;
 }
+
 .yields-box {
   display: block;
   position: relative;
-  grid-column: 1 / 2;
+  grid-column: 1 / 5;
   grid-row: row 4;
   display: grid;
-  grid-template-columns: span 2;
-  grid-template-rows: 1 / 3;
+  grid-template-columns: repeat(3, 1fr);
 }
+
 .material-icons.orange {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -118,21 +130,18 @@ body {
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
   /* Support for IE. */
   font-feature-settings: "liga";
 }
 
 .yields {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 1;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -143,8 +152,9 @@ body {
   color: $gray4;
   margin: 0;
 }
+
 .servings {
-  grid-column: 2;
+  grid-column: 2 / 5;
   grid-row: 2;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -153,14 +163,15 @@ body {
   line-height: 12px;
   color: $orange;
 }
+
 .preparation {
   display: block;
   position: relative;
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   grid-row: row 5;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .material-icons.md-18.gray {
@@ -177,20 +188,18 @@ body {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
 .prep-time {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 1;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -202,7 +211,7 @@ body {
 }
 
 .min {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 2;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -215,12 +224,13 @@ body {
 .cooking {
   display: block;
   position: relative;
-  grid-column: 4 / 6;
+  grid-column: 5 / 8;
   grid-row: row 5;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
 .material-icons.md-18.gray {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -235,21 +245,18 @@ body {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
   /* Support for IE. */
   font-feature-settings: "liga";
 }
 
 .cook-time {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 1;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -261,7 +268,7 @@ body {
 }
 
 .hour {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 2;
   font-family: $fontMontserrat;
   font-style: normal;
@@ -274,11 +281,11 @@ body {
 .total-cooking-time {
   display: block;
   position: relative;
-  grid-column: 8 / 10;
+  grid-column: 9 / 12;
   grid-row: row 5;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .material-icons.md-18.gray {
@@ -295,15 +302,12 @@ body {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
   /* Support for IE. */
   font-feature-settings: "liga";
 }
@@ -352,6 +356,7 @@ body {
   grid-column: 1 / 13;
   grid-row: row 7;
 }
+
 .crust {
   font-size: 0.875rem;
   font-family: $fontPlayfairDisplay;
@@ -391,7 +396,6 @@ body {
   height: 0;
   width: 0;
 }
-
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
@@ -403,29 +407,24 @@ body {
   border: 1px solid orange;
   border-radius: 4px;
 }
-
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: $gray4;
 }
-
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: $background;
 }
-
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Show the checkmark when checked  */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
-
 /* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 8px;
@@ -438,12 +437,14 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .cheesecake-section {
   display: inline-block;
   position: relative;
   grid-column: 1 / 13;
   grid-row: row 9;
 }
+
 .cheesecake {
   font-family: $fontPlayfairDisplay;
   font-style: italic;
@@ -459,6 +460,7 @@ body {
   grid-column: 1 / 13;
   grid-row: row 10;
 }
+
 h6 {
   font-family: $fontMontserrat;
   font-style: normal;
@@ -468,6 +470,7 @@ h6 {
   /* or 24px */
   color: $black;
 }
+
 .instructions {
   font-family: $fontPlayfairDisplay;
   font-style: normal;
@@ -486,7 +489,7 @@ h6 {
   // left: 12px;
   background: $orange;
   border: none;
-  color: white;
+  color: $white;
   text-align: center;
   font: 24px $fontPlayfairDisplay;
   font-weight: bold;
@@ -504,6 +507,7 @@ h6 {
   /* or 18px */
   color: $gray4;
 }
+
 footer {
   grid-column: 1 / 8;
   grid-row: row 12;
