@@ -697,6 +697,15 @@ footer {
   margin-bottom: 0.8rem;
 }
 
+footer a:link {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
+footer a {
+  color: inherit;
+}
+
 /* tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
   .the-container {
@@ -1262,6 +1271,13 @@ footer {
     grid-row: row 21;
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
+  }
+  footer a:link {
+    text-decoration: none;
+    color: #bdbdbd;
+  }
+  footer a {
+    color: inherit;
   }
 }
 
@@ -1832,6 +1848,13 @@ footer {
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
   }
+  footer a:link {
+    text-decoration: none;
+    color: #bdbdbd;
+  }
+  footer a {
+    color: inherit;
+  }
 }
 
 @media screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -2380,7 +2403,7 @@ footer {
     grid-column: 1 / 13;
     grid-row: row 20;
     font-size: 0.85rem;
-    margin: 1.5rem 0.6rem 7rem 12rem;
+    margin: 1.5rem 0.6rem 7rem 19rem;
   }
   footer {
     -ms-grid-column: 1;
@@ -2389,6 +2412,13 @@ footer {
     grid-row: row 21;
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
+  }
+  footer a:link {
+    text-decoration: none;
+    color: #bdbdbd;
+  }
+  footer a {
+    color: inherit;
   }
 }
 /*# sourceMappingURL=style.css.map */

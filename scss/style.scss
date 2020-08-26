@@ -575,6 +575,13 @@ footer {
   text-align: center;
   align-items: center;
   margin-bottom: 0.8rem;
+  a:link {
+    text-decoration: none;
+    color: $gray4;
+  }
+  a {
+    color: inherit;
+  }
 }
 
 /* tablets */
@@ -1053,6 +1060,13 @@ footer {
     grid-row: row 21;
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
+    a:link {
+      text-decoration: none;
+      color: $gray4;
+    }
+    a {
+      color: inherit;
+    }
   }
 }
 
@@ -1532,6 +1546,13 @@ footer {
     grid-row: row 21;
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
+    a:link {
+      text-decoration: none;
+      color: $gray4;
+    }
+    a {
+      color: inherit;
+    }
   }
 }
 
@@ -1994,7 +2015,7 @@ footer {
     grid-column: 1 / 13;
     grid-row: row 20;
     font-size: 0.85rem;
-    margin: 1.5rem 0.6rem 7rem 12rem;
+    margin: 1.5rem 0.6rem 7rem 19rem;
   }
 
   footer {
@@ -2002,5 +2023,12 @@ footer {
     grid-row: row 21;
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
+    a:link {
+      text-decoration: none;
+      color: $gray4;
+    }
+    a {
+      color: inherit;
+    }
   }
 }
